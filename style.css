@@ -1,0 +1,131 @@
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.sky {
+  background-color: #09ade2;
+  height: 250px;
+  position: relative;
+}
+
+.cloud {
+  position: absolute;
+  top: -430px;
+  /* right: 104px; */
+  animation: cloudy 30s infinite linear;
+}
+
+.clouds {
+  position: absolute;
+  top: -386px;
+  right: 540px;
+  /* right: 104px; */
+  animation: cloudsy 27s 14s infinite linear;
+}
+
+.cloudss {
+  position: absolute;
+  top: -396px;
+  left: 500px;
+  animation: cloudssy 20s infinite linear;
+}
+
+.grass {
+  background-color: green;
+  height: 200px;
+}
+
+.road {
+  position: relative;
+  background-color: rgba(94, 94, 94, 0.802);
+  height: 400px;
+}
+
+.mario {
+  position: absolute;
+  right: 850px;
+  bottom: 90px;
+  /* animation-name: drive;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease; */
+  animation: drive 7s infinite ease, jump 1s ease 1s;
+}
+
+.divider {
+  position: absolute;
+  top: 28%;
+  border-top: 7px dashed white;
+  width: 100%;
+}
+
+.luigi {
+  position: absolute;
+  top: 440px;
+  left: 1120px;
+  animation-name: drives;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+}
+
+@keyframes drive {
+  0% {
+    right: 1000px;
+  }
+
+  100% {
+    right: -800px;
+  }
+}
+
+@keyframes drives {
+  0% {
+    right: -100px;
+  }
+  100% {
+    left: -700px;
+  }
+}
+
+@keyframes cloudy {
+  from {
+    right: 1000px;
+  }
+  to {
+    right: -800px;
+  }
+}
+
+@keyframes cloudsy {
+  from {
+    right: 700px;
+  }
+  to {
+    right: -800px;
+  }
+}
+
+@keyframes cloudssy {
+  from {
+    left: 700px;
+  }
+  to {
+    left: -500px;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 90px;
+  }
+  25% {
+    bottom: 150px;
+  }
+  100% {
+    bottom: 90px;
+  }
+}
